@@ -22,7 +22,7 @@ const Header = () => {
           <h1>Q9 Pets</h1>
         </div>
         <nav>
-          {!token && <Link to="/register">Registrar</Link>}
+          <Link to="/register">Registrar</Link>
           <Link to="/list">Lista</Link>
           {token && <button onClick={handleLogout}>Sair</button>}
         </nav>

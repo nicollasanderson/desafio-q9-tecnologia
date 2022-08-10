@@ -8,9 +8,8 @@ export const HeaderMain = styled.header`
     rgba(51, 135, 40, 1) 100%
   );
   height: 100px;
-  width: 100vw;
+  width: 100%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  position: absolute;
 
   a {
     margin: 0 15px;
@@ -41,5 +40,8 @@ export const HeaderMain = styled.header`
         color: white;
       }
     }
+  }
+
+  @media (max-width: 800px) {
   }
 `;
