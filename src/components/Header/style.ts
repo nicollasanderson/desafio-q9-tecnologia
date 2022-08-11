@@ -19,9 +19,17 @@ export const HeaderMain = styled.header`
     text-decoration: none;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
   > div {
     height: 100%;
-    margin: 0 50px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +38,7 @@ export const HeaderMain = styled.header`
       display: flex;
       align-items: center;
       gap: 15px;
+      cursor: pointer;
 
       h1 {
         color: white;
@@ -40,8 +49,12 @@ export const HeaderMain = styled.header`
         color: white;
       }
     }
-  }
 
-  @media (max-width: 800px) {
+    @media (max-width: 800px) {
+      padding: 0 30px;
+      h1 {
+        font-size: 25px;
+      }
+    }
   }
 `;

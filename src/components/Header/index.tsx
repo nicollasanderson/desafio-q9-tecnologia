@@ -1,6 +1,6 @@
 import { HeaderMain } from "./style";
 import { MdPets } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { UseTokenProvider } from "../../providers/token";
 
 const Header = () => {
@@ -21,11 +21,7 @@ const Header = () => {
           <MdPets />
           <h1>Q9 Pets</h1>
         </div>
-        <nav>
-          <Link to="/register">Registrar</Link>
-          <Link to="/list">Lista</Link>
-          {token && <button onClick={handleLogout}>Sair</button>}
-        </nav>
+        <nav>{token && <button onClick={handleLogout}>Sair</button>}</nav>
       </div>
     </HeaderMain>
   );

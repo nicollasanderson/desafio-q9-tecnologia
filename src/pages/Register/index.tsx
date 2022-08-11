@@ -7,13 +7,6 @@ const Register = () => {
     <>
       <Header />
       <StyledSection>
-        <figure>
-          <img
-            src="https://i.imgur.com/zNBuH9q.png"
-            alt="Uma moça bonita com um doguinho"
-          />
-          <figcaption>Uma moça bonita com um doguinho</figcaption>
-        </figure>
         <RegisterForm />
       </StyledSection>
     </>

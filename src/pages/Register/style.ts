@@ -6,4 +6,10 @@ export const StyledSection = styled.section`
   justify-content: center;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 800px) {
+    figure {
+      display: none;
+    }
+  }
 `;

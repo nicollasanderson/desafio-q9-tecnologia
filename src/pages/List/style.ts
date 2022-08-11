@@ -16,6 +16,7 @@ export const StyledSearchBar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 
   @media (max-width: 850px) {
     flex-flow: wrap;
@@ -44,7 +45,7 @@ export const BreedButton = styled(motion.button)<IButton>`
   color: white;
   border: 2px solid black;
   border-radius: 10px;
-  margin: 0 20px;
+  margin: 10px 20px;
   background-color: red;
   background: rgb(66, 217, 46);
   background: linear-gradient(

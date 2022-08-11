@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const ModalSection = styled.section`
   width: 100vw;
-  height: 111vh;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   top: 0;
   background-color: rgb(0, 0, 0, 0.7);
   display: flex;
@@ -20,7 +20,7 @@ export const ModalSection = styled.section`
 
 export const ModalImage = styled(motion.img)`
   max-width: 90%;
-  max-height: 800px;
+  max-height: 90%;
   border-radius: 10px;
   border: 2px solid rgb(66, 217, 46);
 `;
