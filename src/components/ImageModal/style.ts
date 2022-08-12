@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ModalSection = styled.section`
-  width: 100vw;
+  width: 103vw;
   height: 100vh;
   position: fixed;
   top: 0;
