@@ -15,7 +15,7 @@ const DogCard = ({ image, breed }: CardProps) => {
 
   return (
     <>
-      {modal && <ImageModal image={image} setModal={setModal} />}
+      {modal && <ImageModal image={image} setModal={setModal} breed={breed} />}
       <StyledCard whileHover={{ scale: 1.1 }} onClick={handleClick}>
         <figure>
           <img src={image} alt={`Um ${breed} muito fofinho :D`} />

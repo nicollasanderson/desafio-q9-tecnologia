@@ -17,13 +17,13 @@ const RegisterForm = () => {
       .required(" obrigatório"),
   });
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (token) {
       return navigate("/list");
     }
   });
-
-  const navigate = useNavigate();
 
   const {
     register,
@@ -33,7 +33,9 @@ const RegisterForm = () => {
 
   const handleRegister = (data: any) => {
     app
-      .post("register", data)
+      .post("register", data, {
+        headers: { "Content-Type": "application/json" },
+      })
       .then((response) => {
         window.localStorage.setItem("@q9pets:token", response.data.user.token);
         toast.success("Registrado com sucesso!");
@@ -57,11 +59,16 @@ const RegisterForm = () => {
         <StyledLabel htmlFor="email" errColor={errors.email ? true : false}>
           E-mail {errors.email && "- " + errors.email.message}
         </StyledLabel>
-        <input type="email" {...register("email")} />
+        <input
+          type="email"
+          placeholder="Seu melhor email"
+          {...register("email")}
+        />
         <RegisterButton
           initial={{ scale: 1 }}
           transition={{ duration: 0.2 }}
           whileHover={{ scale: 1.2 }}
+          type="submit"
         >
           Registrar
         </RegisterButton>

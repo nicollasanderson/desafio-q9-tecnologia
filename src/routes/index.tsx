@@ -6,7 +6,7 @@ import Register from "../pages/Register";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/register" element={<Register />} />
+      <Route path="/" element={<Register />} />
       <Route path="/list" element={<List />} />
       <Route path="*" element={<Page404 />} />
     </Routes>

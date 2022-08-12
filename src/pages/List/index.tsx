@@ -25,7 +25,7 @@ const List = () => {
   const getList = (newBreed: string) => {
     app
       .get(`/list?breed=${newBreed}`, {
-        headers: { Authorization: token },
+        headers: { Authorization: token, "Content-Type": "application/json" },
       })
       .then((response) => {
         setBreed(response.data.breed);
@@ -41,7 +41,7 @@ const List = () => {
 
   useEffect(() => {
     if (!token) {
-      return navigate("/register");
+      return navigate("/");
     }
     getList(breed);
   }, []);

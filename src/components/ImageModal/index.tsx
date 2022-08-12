@@ -1,6 +1,12 @@
 import { ModalImage, ModalSection } from "./style";
 
-const ImageModal = ({ setModal, image }: any) => {
+interface IMageModal {
+  setModal: any;
+  image: string;
+  breed: string;
+}
+
+const ImageModal = ({ setModal, image, breed }: IMageModal) => {
   const handleModal = () => {
     setModal(false);
   };
@@ -17,6 +23,7 @@ const ImageModal = ({ setModal, image }: any) => {
             duration: 0.5,
           }}
           animate={{ opacity: 1, y: 0 }}
+          alt={`Um ${breed} muito fofinho :D`}
         />
         <figcaption>Um doguinho lindo</figcaption>
       </figure>

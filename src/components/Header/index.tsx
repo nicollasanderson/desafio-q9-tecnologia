@@ -11,7 +11,7 @@ const Header = () => {
   const handleLogout = () => {
     window.localStorage.clear();
     setToken(false);
-    navigate("/register");
+    navigate("/");
   };
 
   return (
